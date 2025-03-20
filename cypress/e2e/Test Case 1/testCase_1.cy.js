@@ -1,17 +1,22 @@
 describe('Describe Test case 1', () => {
-    before(() => {
-        cy.Homepage(); // visit the url before every test
-	});
+   
 
-    it('should be verify if the webpage is visible',()=>{
-       
-        cy.verifyURL();
+    it('should visit homepage & verify if the webpage is visible',()=>{
+        
+       // cy.Homepage();
+        //cy.verifyURL();
  
      })
      it('should click on products button ',()=>{
+       // cy.clickOnAllProduct();
+     })
+     it('should visit or navigate the allproduct page ',()=>{
 
-        cy.xpath("//a[@href ='/products']").click();
- 
+      //  cy.navigateProductPage();
+     })
+     it('should search a product on search bar & verify the product is exist',()=>{
+
+        cy.searchAndVerifyProduct();
      })
 
 });

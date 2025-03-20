@@ -24,11 +24,35 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require('cypress-xpath');
-import {HomePage,verifyURL} from "../e2e/Test Case 1/helper";
+//test case 1
+import {HomePage,verifyURL,clickOnAllProduct,navigateProductPage,searchAndVerifyProduct} from "../e2e/Test Case 1/helper";
 
 Cypress.Commands.add("Homepage", () => {
     HomePage();
 })
 Cypress.Commands.add("verifyURL", () => {
     verifyURL();
+})
+Cypress.Commands.add("clickOnAllProduct", () => {
+    clickOnAllProduct();
+})
+Cypress.Commands.add("navigateProductPage", () => {
+    navigateProductPage();
+})
+Cypress.Commands.add("searchAndVerifyProduct", () => {
+    searchAndVerifyProduct();
+})
+
+//test case 2
+import {clickOnViewProduct,verifyProductDetailsPage,increaseQuantityAddToCartViewCart} from "../e2e/Test Case 2/helper2";
+
+Cypress.Commands.add("clickOnViewProduct", () => {
+    clickOnViewProduct();
+})
+
+Cypress.Commands.add("verifyProductDetailsPage", () => {
+    verifyProductDetailsPage();
+})
+Cypress.Commands.add("increaseQuantityAddToCartViewCart", () => {
+    increaseQuantityAddToCartViewCart();
 })
